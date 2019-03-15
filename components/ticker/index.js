@@ -1,11 +1,10 @@
-function html(i) { return i }
+function html (i) { return i }
 
 class StockTicker extends HTMLElement {
-
-    // Use createdCallback instead of constructor to init an element.
-    createdCallback() {
-        // This element uses Shadow DOM.
-        this.createShadowRoot().innerHTML = html `
+  // Use createdCallback instead of constructor to init an element.
+  createdCallback () {
+    // This element uses Shadow DOM.
+    this.createShadowRoot().innerHTML = html`
         <style>
           
         @-webkit-keyframes ticker {
@@ -85,17 +84,16 @@ p {
             <!--<div class="ticker__item">Authentic bitters seitan pug single-origin coffee whatever.</div>  <div class="ticker__item">Letterpress chambray brunch.</div>  <div class="ticker__item">Vice mlkshk crucifix beard chillwave meditation hoodie asymmetrical Helvetica.</div>  <div class="ticker__item">Ugh PBR&B kale chips Echo Park.</div>  <div class="ticker__item">Gluten-free mumblecore chambray mixtape food truck. </div>  <div class="ticker__item">Authentic bitters seitan pug single-origin coffee whatever.</div>--></div>
     </div>
 
-      `;
-        //✢ ✥ ✦ ✧ ❂ ❉ ✱ ✲ ✴ ✵ ✶ ✷ ✸ ❇ ✹ ✺ ✻ ✼ ❈ ✮ ✡
-        // Update the ticker prices.
-        //this.updateQuotes(); // We'll define this later.
-    }
+      `
+    // ✢ ✥ ✦ ✧ ❂ ❉ ✱ ✲ ✴ ✵ ✶ ✷ ✸ ❇ ✹ ✺ ✻ ✼ ❈ ✮ ✡
+    // Update the ticker prices.
+    // this.updateQuotes(); // We'll define this later.
+  }
 
-
-    // You can also define the other lifecycle methods.
-    attachedCallback() {}
-    detachedCallback() {}
-    attributeChangedCallback() {}
+  // You can also define the other lifecycle methods.
+  attachedCallback () {}
+  detachedCallback () {}
+  attributeChangedCallback () {}
 }
 
 document.registerElement('stock-ticker', StockTicker)

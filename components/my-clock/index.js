@@ -1,11 +1,10 @@
-function html(i) { return i }
+function html (i) { return i }
 
 class MyClock extends HTMLElement {
-
-    // Use createdCallback instead of constructor to init an element.
-    createdCallback() {
-        // This element uses Shadow DOM.
-        this.createShadowRoot().innerHTML = html `
+  // Use createdCallback instead of constructor to init an element.
+  createdCallback () {
+    // This element uses Shadow DOM.
+    this.createShadowRoot().innerHTML = html`
         <style>
         #clock {
         background: blue;
@@ -25,15 +24,13 @@ class MyClock extends HTMLElement {
             10:23
         </div>
 
-      `;
+      `
+  }
 
-    }
-
-
-    // You can also define the other lifecycle methods.
-    attachedCallback() {}
-    detachedCallback() {}
-    attributeChangedCallback() {}
+  // You can also define the other lifecycle methods.
+  attachedCallback () {}
+  detachedCallback () {}
+  attributeChangedCallback () {}
 }
 
 document.registerElement('my-clock', MyClock)
